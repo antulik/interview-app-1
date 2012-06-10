@@ -1,30 +1,19 @@
-# Here is a sample/template sinatra application ready for deployment to [Heroku](http://heroku.com).
+Hacking challenge 
 
-**NOTE** This is for heroku.com and not herokugarden.com
+Use sinatra, google shopping api to create a simple search interface to search within "vintage decor" goods sorted by cheapest price ONLY on Google search API deployed on heroku.com.
 
-* Create an acount in seconds at [Heroku](http://heroku.com/signup).
-* Install the gem `sudo gem install heroku`.
-* If you do not have an SSH key
-you'll need to [generate
-one](http://heroku.com/docs/index.html#_setting_up_ssh_public_keys)
-and [tell Heroku about
-it](http://heroku.com/docs/index.html#_manage_keys_on_heroku)
-* Clone this repo `git clone git://github.com/sinatra/heroku-sinatra-app [appname]`
-* `cd /path/to/project`
-* `heroku create [optional-app-name]` (You can rename your app with `heroku rename`)
-* `git push heroku master`
+Search page
 
-**NOTES**
+[_input box_] [search]
 
-The small amount of code is heavily commented. If you have questions
-or comments please use [the channels provided](http://www.sinatrarb.com/contributing.html) by the Sinatra community as
-we at Heroku are heavily involved in Sinatra.  Please use the Heroku [mailing list](http://groups.google.com/group/heroku) if you
-have non Sinatra questions.
+Result page
 
-See [these guidelines](http://www.sinatrarb.com/contributing.html) for
-contributing or bugs.
+- [image] [product title] [price]
+- [image] [product title] [price]
+- [image] [product title] [price]
 
-Happy Development and Deploying!
+Sinatra heroku example app
+https://github.com/sinatra/heroku-sinatra-app
 
-Sincerely,
-The Heroku Team
+Google Shopping API
+Docs: https://developers.google.com/shopping-search/v1/getting_started

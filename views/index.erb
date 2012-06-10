@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/application.css" type="text/css" media="screen">
+</head>
+<body>
+<div class="container">
+
+  <div class="row">
+    <div class="offset4">
+
+      <h2>Vintage Decor search</h2>
+
+      <form action="search" method="GET" class="form-search">
+        <input type="text" class="span4 search-query" name="query" value="<%= CGI::escapeHTML(@query) %>">
+        <button type="submit" class="btn btn-inverse">Search</button>
+      </form>
+    </div>
+
+    <table class="table table-striped products">
+      <tbody>
+      <% @products.each do |product| %>
+          <tr class="product">
+            <td>
+              <% if product.image %>
+                  <img src="<%= product.image %>"/>
+              <% end %>
+            </td>
+            <td>
+              <h3><%= product.title %></h3>
+              <%= product.description %>
+            </td>
+            <td class="price">
+              <h3><%= product.currency %> <%= product.price %></h3>
+            </td>
+          </tr>
+      <% end %>
+
+      <% if @products.empty? && @query.length > 0 %>
+          <div class="alert alert-info">
+            No products found.
+          </div>
+      <% end %>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+</body>
+</html>
